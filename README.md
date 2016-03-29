@@ -1,2 +1,4 @@
-# grid-lib
-Library of grids built on Susy
+
+# Grid lib
+
+Library of web grids built on Susy.
