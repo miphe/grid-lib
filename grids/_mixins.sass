@@ -1,0 +1,48 @@
+
+=show-grid-outlines
+  > *
+    background: beige
+    border: 1px dashed rgba(50, 50, 50, .25)
+
+=standard-grid($std-grid_settings)
+  $std-grid_columns: map-get($std-grid_settings, bps)
+  $std-grid_column-length: length($std-grid_columns)
+  $std-grid_i: 1
+
+  @each $column-name, $column-bps in map-get($std-grid_settings, bps)
+
+    // Creates selector for each immediate decendant
+    // of placeholder's element. The assumption here being
+    // that columns must be immediate decendants of the grid container.
+    > *:nth-child(#{$std-grid_i})
+      
+      @each $label, $bp in $column-bps
+        
+        @if $bp == 0
+          display: none
+
+        @else if $label == 'default'
+          display: block
+
+          @if $std-grid_i == $std-grid_column-length
+            display: block
+            +span($bp of map-get($std-grid_settings, columns) last)
+
+          @else
+            display: block
+            +span($bp of map-get($std-grid_settings, columns))
+        
+        @else
+          +breakpoint(map-get($breakpoint-settings, $label))
+    
+            // Renders 'last' properties in case we're in last iteration.
+            @if $std-grid_i == $std-grid_column-length
+              display: block
+              +span($bp of map-get($std-grid_settings, columns) last)
+
+            @else
+              display: block
+              +span($bp of map-get($std-grid_settings, columns))
+
+    // Increment index, keeping track of last iteration.
+    $std-grid_i: $std-grid_i + 1

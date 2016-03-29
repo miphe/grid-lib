@@ -1,0 +1,31 @@
+
+@import compass
+@import compass/reset
+@import susy
+@import breakpoint
+@import mixins
+
++border-box-sizing
+
+h1
+  line-height: 1.8
+  margin: 2rem 0 1rem 0
+  border-bottom: 1px dotted #ccc
+
+// Settings
+@import breakpoints
+@import grid-settings
+
+// Grids
+@import sb-main
+@import sb-main-sb
+
+// Render CSS for examples
+// You should render these on your own project, with your own selectors
+.sb-main
+  @extend %sb-main
+  +show-grid-outlines
+
+.sb-main-sb
+  @extend %sb-main-sb
+  +show-grid-outlines

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,IAAU;EACR,KAAK,EAAE,IAAI",
+"sources": ["../grids/_sb-main.sass"],
+"names": [],
+"file": "page-layouts.css"
+}

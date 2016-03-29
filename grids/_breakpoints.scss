@@ -1,0 +1,20 @@
+
+$xx-small:  15rem;
+$x-small:   20rem;
+$small:     30rem;
+$medium:    40rem;
+$large:     50rem;
+$x-large:   80rem;
+$xx-large:  90rem;
+$xxx-large: 100rem;
+
+$breakpoint-settings: (
+  xx-small  : $xx-small,
+  x-small   : $x-small,
+  small     : $small,
+  medium    : $medium,
+  large     : $large,
+  x-large   : $x-large,
+  xx-large  : $xx-large,
+  xxx-large : $xxx-large
+);
