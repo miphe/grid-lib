@@ -23,10 +23,10 @@ $susy: (
 );
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Sidebar - Main (sb-main)
+// Sidebar - Main (myt-sb-main)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-$sb-main_settings: (
+$myt-sb-main_settings: (
   columns: map-get($susy, columns),
 
   bps: (
@@ -36,10 +36,10 @@ $sb-main_settings: (
 );
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Sidebar - Main - Sidebar (sb-main-sb)
+// Sidebar - Main - Sidebar (myt-sb-main-sb)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-$sb-main-sb_settings: (
+$myt-sb-main-sb_settings: (
   columns: map-get($susy, columns),
 
   bps: (

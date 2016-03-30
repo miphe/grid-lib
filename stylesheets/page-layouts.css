@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* line 2, ../grids/_sb-main.sass */
+/* line 2, ../grids/_myt-grids.sass */
 .sb-main {
   overflow: hidden;
   *zoom: 1;
@@ -215,7 +215,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 
-/* line 2, ../grids/_sb-main-sb.sass */
+/* line 6, ../grids/_myt-grids.sass */
 .sb-main-sb {
   overflow: hidden;
   *zoom: 1;
@@ -361,14 +361,14 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   border: 1px dashed rgba(50, 50, 50, 0.25);
 }
 
-/* line 38, ../grids/page-layouts.sass */
+/* line 37, ../grids/page-layouts.sass */
 h1 {
   line-height: 1.8;
   margin: 2rem 0 1rem 0;
   border-bottom: 1px dotted #ccc;
 }
 
-/* line 43, ../grids/page-layouts.sass */
+/* line 42, ../grids/page-layouts.sass */
 body {
   padding: 2rem 4rem;
 }
