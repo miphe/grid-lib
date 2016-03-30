@@ -1,30 +1,57 @@
 
-=show-grid-outlines
+=show-grid-columns
   > *
     background: beige
     border: 1px dashed rgba(50, 50, 50, .25)
+    padding: 1.8rem
+    color: rgba(50, 50, 50, .25)
+
+    &:hover
+      border-color: rgba(50, 50, 50, 1)
+      color: rgba(50, 50, 50, 1)
 
 =standard-grid($std-grid_settings)
   $std-grid_columns: map-get($std-grid_settings, bps)
   $std-grid_column-length: length($std-grid_columns)
+  $std-grid_non-hidden-column-length: 0
+  $std-grid_single-column: false
   $std-grid_i: 1
 
+  // Creates a number of how many non hidden columns the settings contain.
   @each $column-name, $column-bps in map-get($std-grid_settings, bps)
+    @if index($column-bps, (hide true)) == null
+      $std-grid_non-hidden-column-length: $std-grid_non-hidden-column-length + 1
+
+  // Iterates over each column
+  @each $column-name, $column-bps in map-get($std-grid_settings, bps)
+
+    @if $std-grid_non-hidden-column-length == 1
+      $std-grid_single-column: true
 
     // Creates selector for each immediate decendant
     // of placeholder's element. The assumption here being
     // that columns must be immediate decendants of the grid container.
     > *:nth-child(#{$std-grid_i})
       
+      // Iterated over each breakpoint
       @each $label, $bp in $column-bps
         
-        @if $bp == 0
+        // If this grid has only 1 column, skip all upcoming logic.
+        @if $std-grid_single-column
+
+          // Checks if the current column should be hidden
+          @if $label == hide and $bp == true
+            display: none
+          @else
+            +span($bp of map-get($std-grid_settings, columns) last)
+
+        @else if ($bp == 0) or ($label == hide and $bp == true)
           display: none
 
         @else if $label == 'default'
-          display: block
+          // Above: Default breakpoint renders without media queries (mobile first)
 
-          @if $std-grid_i == $std-grid_column-length
+          @if $std-grid_i == $std-grid_non-hidden-column-length
             display: block
             +span($bp of map-get($std-grid_settings, columns) last)
 
@@ -35,8 +62,7 @@
         @else
           +breakpoint(map-get($breakpoint-settings, $label))
     
-            // Renders 'last' properties in case we're in last iteration.
-            @if $std-grid_i == $std-grid_column-length
+            @if $std-grid_i == $std-grid_non-hidden-column-length
               display: block
               +span($bp of map-get($std-grid_settings, columns) last)
 
@@ -44,5 +70,8 @@
               display: block
               +span($bp of map-get($std-grid_settings, columns))
 
-    // Increment index, keeping track of last iteration.
+    // In case the current column is explicitly hidden, reduce index
+    // with 1, this will keep the last column count accurate.
+    // @if index($column-bps, (hide true)) == null
     $std-grid_i: $std-grid_i + 1
+      

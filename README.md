@@ -43,15 +43,14 @@ This is the end usage of grid-lib, time for you to import the grids you're inter
 
 ```sass
 // Import interesting grids
-@import sb-main
-@import sb-main-sb
+@import ../grids/myt-grids
 
 // Extend your own selectors
 .my-custom-main-grid-container
-  @extend %sb-main
+  @extend %myt-sb-main
 
 .another-secondary-container
-  @extend %sb-main-sb
+  @extend %myt-sb-main-sb
 ```
 
 ## About grid lib

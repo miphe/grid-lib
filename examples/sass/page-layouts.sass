@@ -16,28 +16,45 @@
 // Import grids dependencies
 // - Your project's grid file is a good place to import this in.
 // - The different grids depend on this.
-@import ../dist/grid-lib
+@import ../../dist/grid-lib
 
 // Import grids
 // - You may pick and choose which grids you need.
 // - Your project's grid file is a good place to import this in.
-@import myt-grids
+@import ../../grids/myt-grids
 
 // Render CSS for examples
 // - You should render these on your own project, with your own selectors.
-.sb-main
+.myt-sb-main
   @extend %myt-sb-main
-  +show-grid-outlines
+  +show-grid-columns
 
-.sb-main-sb
+.myt-sb-main-sb
   @extend %myt-sb-main-sb
-  +show-grid-outlines
+  +show-grid-columns
+
+.myt-main
+  @extend %myt-main
+  +show-grid-columns
+
+.myt-25-25-25-25
+  @extend %myt-25-25-25-25
+  +show-grid-columns
 
 // Unrelated (simply for example page)
 h1
+  color: #ccc
+  font-size: 2rem
   line-height: 1.8
-  margin: 2rem 0 1rem 0
-  border-bottom: 1px dotted #ccc
+  margin: 1rem 0 1rem 0
+
+h2
+  font-size: 1.6rem
+  font-family: "Lucida Console", Monaco, monospace
+  line-height: 1.8
+  margin: 3rem 0 1rem 0
+  border-bottom: 1px solid #ddd
 
 body
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
   padding: 2rem 4rem

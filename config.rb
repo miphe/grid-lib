@@ -4,8 +4,8 @@ require 'breakpoint'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "stylesheets"
-sass_dir = "grids"
+css_dir = "examples/stylesheets"
+sass_dir = "examples/sass"
 images_dir = "img"
 javascripts_dir = "js"
 

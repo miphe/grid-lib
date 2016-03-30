@@ -1,6 +1,6 @@
 {
   "name": "grid-lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Library of Sass grids powered by Susy",
   "main": "dist/grid-lib.sass",
   "author": "André Drougge",

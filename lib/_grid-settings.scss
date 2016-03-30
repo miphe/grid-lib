@@ -22,6 +22,11 @@ $susy: (
   debug: $debug
 );
 
+// MyTalengi grid settings.
+// The MyTalengi grids are built to support leaving all
+// column elements in the markup even if they should not show,
+// as well as hiding columns only during certain breakpoints.
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Sidebar - Main (myt-sb-main)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,7 +36,8 @@ $myt-sb-main_settings: (
 
   bps: (
     col-1: (default: 6, small: 5, medium: 4, large: 3, x-large: 2 ),
-    col-2: (default: 6, small: 7, medium: 8, large: 9, x-large: 10)
+    col-2: (default: 6, small: 7, medium: 8, large: 9, x-large: 10),
+    col-3: (hide: true)
   )
 );
 
@@ -46,5 +52,34 @@ $myt-sb-main-sb_settings: (
     col-1: (default: 8, medium: 4, large: 3, x-large: 3),
     col-2: (default: 0, medium: 5, large: 6, x-large: 7),
     col-3: (default: 4, medium: 3, large: 3, x-large: 2)
+  )
+);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Main (myt-main)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$myt-main_settings: (
+  columns: map-get($susy, columns),
+
+  bps: (
+    col-1: (hide: true),
+    col-2: (default: 12),
+    col-3: (hide: true)
+  )
+);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 25-25-25-25 (myt-25-25-25-25)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$myt-25-25-25-25_settings: (
+  columns: map-get($susy, columns),
+
+  bps: (
+    col-1: (default: 12, small: 3 ),
+    col-2: (default: 12, small: 3 ),
+    col-3: (default: 12, small: 3 ),
+    col-4: (default: 12, small: 3 )
   )
 );
