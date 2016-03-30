@@ -1,27 +1,31 @@
 
+// Example file.
+// This is an example of how this library may be used.
+// This file would represent something like a _grids.sass
+// file in your project, showing just which files you
+// would need to import in order to make use of the 
+// placeholders and render the grid styles unto your own selectors.
+
+// Project dependencies
+// - Any project would need to import these at some point.
 @import compass
 @import compass/reset
 @import susy
 @import breakpoint
-@import mixins
 
-+border-box-sizing
+// Import grids dependencies
+// - Your project's grid file is a good place to import this in.
+// - The different grids depend on this.
+@import ../dist/grid-lib
 
-h1
-  line-height: 1.8
-  margin: 2rem 0 1rem 0
-  border-bottom: 1px dotted #ccc
-
-// Settings
-@import breakpoints
-@import grid-settings
-
-// Grids
+// Import grids
+// - You may pick and choose which grids you need.
+// - Your project's grid file is a good place to import this in.
 @import sb-main
 @import sb-main-sb
 
 // Render CSS for examples
-// You should render these on your own project, with your own selectors
+// - You should render these on your own project, with your own selectors.
 .sb-main
   @extend %sb-main
   +show-grid-outlines
@@ -29,3 +33,9 @@ h1
 .sb-main-sb
   @extend %sb-main-sb
   +show-grid-outlines
+
+// Unrelated (simply for example page)
+h1
+  line-height: 1.8
+  margin: 2rem 0 1rem 0
+  border-bottom: 1px dotted #ccc

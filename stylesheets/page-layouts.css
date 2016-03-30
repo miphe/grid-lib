@@ -70,13 +70,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* line 10, ../grids/page-layouts.sass */
-h1 {
-  line-height: 1.8;
-  margin: 2rem 0 1rem 0;
-  border-bottom: 1px dotted #ccc;
-}
-
 /* line 2, ../grids/_sb-main.sass */
 .sb-main {
   overflow: hidden;
@@ -133,7 +126,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   background-clip: content-box, border-box;
   background-position: left top;
 }
-/* line 17, ../grids/_mixins.sass */
+/* line 17, ../lib/_mixins.sass */
 .sb-main > *:nth-child(1) {
   display: block;
   display: block;
@@ -142,7 +135,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   margin-right: 1.69492%;
 }
 @media (min-width: 30rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(1) {
     display: block;
     width: 40.67797%;
@@ -151,7 +144,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 40rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(1) {
     display: block;
     width: 32.20339%;
@@ -160,7 +153,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 50rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(1) {
     display: block;
     width: 23.72881%;
@@ -169,7 +162,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 80rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(1) {
     display: block;
     width: 15.25424%;
@@ -177,7 +170,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
     margin-right: 1.69492%;
   }
 }
-/* line 17, ../grids/_mixins.sass */
+/* line 17, ../lib/_mixins.sass */
 .sb-main > *:nth-child(2) {
   display: block;
   display: block;
@@ -186,7 +179,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   margin-right: 0;
 }
 @media (min-width: 30rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(2) {
     display: block;
     width: 57.62712%;
@@ -195,7 +188,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 40rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(2) {
     display: block;
     width: 66.10169%;
@@ -204,7 +197,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 50rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(2) {
     display: block;
     width: 74.57627%;
@@ -213,7 +206,7 @@ head:hover ~ .sb-main:before, head:hover ~ body .sb-main:before {
   }
 }
 @media (min-width: 80rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main > *:nth-child(2) {
     display: block;
     width: 83.05085%;
@@ -254,7 +247,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   background-clip: content-box, border-box;
   background-position: left top;
 }
-/* line 17, ../grids/_mixins.sass */
+/* line 17, ../lib/_mixins.sass */
 .sb-main-sb > *:nth-child(1) {
   display: block;
   display: block;
@@ -263,7 +256,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   margin-right: 1.69492%;
 }
 @media (min-width: 40rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(1) {
     display: block;
     width: 32.20339%;
@@ -272,7 +265,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 50rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(1) {
     display: block;
     width: 23.72881%;
@@ -281,7 +274,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 80rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(1) {
     display: block;
     width: 23.72881%;
@@ -289,12 +282,12 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
     margin-right: 1.69492%;
   }
 }
-/* line 17, ../grids/_mixins.sass */
+/* line 17, ../lib/_mixins.sass */
 .sb-main-sb > *:nth-child(2) {
   display: none;
 }
 @media (min-width: 40rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(2) {
     display: block;
     width: 40.67797%;
@@ -303,7 +296,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 50rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(2) {
     display: block;
     width: 49.15254%;
@@ -312,7 +305,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 80rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(2) {
     display: block;
     width: 57.62712%;
@@ -320,7 +313,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
     margin-right: 1.69492%;
   }
 }
-/* line 17, ../grids/_mixins.sass */
+/* line 17, ../lib/_mixins.sass */
 .sb-main-sb > *:nth-child(3) {
   display: block;
   display: block;
@@ -329,7 +322,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   margin-right: 0;
 }
 @media (min-width: 40rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(3) {
     display: block;
     width: 23.72881%;
@@ -338,7 +331,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 50rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(3) {
     display: block;
     width: 23.72881%;
@@ -347,7 +340,7 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 @media (min-width: 80rem) {
-  /* line 17, ../grids/_mixins.sass */
+  /* line 17, ../lib/_mixins.sass */
   .sb-main-sb > *:nth-child(3) {
     display: block;
     width: 15.25424%;
@@ -356,14 +349,21 @@ head:hover ~ .sb-main-sb:before, head:hover ~ body .sb-main-sb:before {
   }
 }
 
-/* line 3, ../grids/_mixins.sass */
+/* line 3, ../lib/_mixins.sass */
 .sb-main > * {
   background: beige;
   border: 1px dashed rgba(50, 50, 50, 0.25);
 }
 
-/* line 3, ../grids/_mixins.sass */
+/* line 3, ../lib/_mixins.sass */
 .sb-main-sb > * {
   background: beige;
   border: 1px dashed rgba(50, 50, 50, 0.25);
+}
+
+/* line 38, ../grids/page-layouts.sass */
+h1 {
+  line-height: 1.8;
+  margin: 2rem 0 1rem 0;
+  border-bottom: 1px dotted #ccc;
 }
