@@ -367,3 +367,8 @@ h1 {
   margin: 2rem 0 1rem 0;
   border-bottom: 1px dotted #ccc;
 }
+
+/* line 43, ../grids/page-layouts.sass */
+body {
+  padding: 2rem 4rem;
+}
