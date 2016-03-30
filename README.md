@@ -18,10 +18,12 @@ _To use the grid placeholders you need to:_
 ### More indepth
 _To use the grid placeholders you need to:_
 
-*Install the grid-lib node package:*
+**Install the grid-lib node package:**
+
 `npm install grid-lib --save-dev`
 
-*Include high level deps:*
+**Include high level deps:**
+
 Grid lib makes use of `compass`, `susy` and `breakpoint`. They will need to be required in your project. This is usually achieved by `require('breakpoint')` in your `config.rb` file that handles the configuration of your compass project.
 
 More information about this can be found here:
@@ -29,12 +31,14 @@ More information about this can be found here:
 - [Susy](http://susy.oddbird.net/)
 - [Breakpoint](http://breakpoint-sass.com/)
 
-*Local dependencies:*
+**Local dependencies:**
+
 In your project you'll need to import the file `dist/grid-lib.sass`. This file will in turn import the different dependencies all grid placeholders has.
 
 `@import node_modules/grid-lib/dist/grid-lib`
 
-*Extend your selectors:*
+**Extend your selectors:**
+
 This is the end usage of grid-lib, time for you to import the grids you're interested in using and to extend your selectors like so:
 
 ```
