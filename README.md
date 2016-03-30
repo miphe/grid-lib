@@ -41,7 +41,7 @@ In your project you'll need to import the file `dist/grid-lib.sass`. This file w
 
 This is the end usage of grid-lib, time for you to import the grids you're interested in using and to extend your selectors like so:
 
-```
+```sass
 // Import interesting grids
 @import sb-main
 @import sb-main-sb
