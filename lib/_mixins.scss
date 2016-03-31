@@ -28,6 +28,13 @@
   // gutter-override    : no-gutters / <length>  # Susy global setting
   // simple-grid        : <bool>                 # false
 
+  // Important note of confusion; gutter-override works with Susy's
+  // native gutter correction logic, at the time of writing it will
+  // add or _not render_ gutters - it will not remove them.
+  // When in need of a grid without gutters altogether (no space)
+  // between columns, the simple-grid option is what you want. It
+  // will make use of regular math instead of Susy.
+
   // Prepares column count.
   @if map-get($render-span-settings, column-count) {
     $render-span_column-count: map-get($render-span-settings, column-count);
