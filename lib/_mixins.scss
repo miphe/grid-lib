@@ -1,3 +1,5 @@
+
+// Renders some styles to better understand how the grids work visually.
 @mixin show-grid-columns {
   > * {
     background: beige;
@@ -50,16 +52,22 @@
     $render-span_new-settings: join($render-span_new-settings, $render-span_gutter-override);
   }
 
-  @debug $render-span_new-settings;
+  // @debug $render-span_new-settings;
+
+  display: block;
   @include span($render-span_new-settings);
 }
 
+// Compound mixin handling rendering grids based on a settings map.
 @mixin standard-grid($std-grid_settings, $no-gutters: false) {
   $std-grid_columns:                  map-get($std-grid_settings, bps);
   $std-grid_column-length:            length($std-grid_columns);
   $std-grid_non-hidden-column-length: 0;
   $std-grid_single-column:            false;
   $std-grid_i:                        1;
+  $std-grid_gutter-override:          false;
+
+  @if $no-gutters { $std-grid_gutter-override: no-gutters; }
 
   // Creates a number of how many non hidden columns the settings contain.
   @each $column-name, $column-bps in map-get($std-grid_settings, bps) {
@@ -70,6 +78,8 @@
 
   // Iterates over each column
   @each $column-name, $column-bps in map-get($std-grid_settings, bps) {
+
+    // Creates variable letting us know if there is only one column in this grid.
     @if $std-grid_non-hidden-column-length == 1 {
       $std-grid_single-column: true;
     }
@@ -79,63 +89,37 @@
     // that columns must be immediate decendants of the grid container.
     > *:nth-child(#{$std-grid_i}) {
 
+      // $bla: (column-count: 2, last: true, gutter-override: 1/4);
+
       // Iterated over each breakpoint
       @each $label, $bp in $column-bps {
 
-        // If this grid has only 1 column, skip all upcoming logic.
-        @if $std-grid_single-column {
-
-          // Checks if the current column should be hidden
-          @if $label == hide and $bp == true {
-            display: none;
-          }
-
-          @else {
-            @include span($bp of map-get($std-grid_settings, columns) last);
-          }
-        }
-
-        @else if $bp == 0 or $label == hide and $bp == true {
+        // Hides column if it is explicitly hidden in settings
+        // or if columns size is 0 (meaning no width).
+        @if $bp == 0 or ($label == hide and $bp == true) {
           display: none;
-        }
-  
-        // Default breakpoint renders without media queries (mobile first)
-        @else if $label == "default" {
+        } @else {
 
-          @if $std-grid_i == $std-grid_non-hidden-column-length {
-            display: block;
+          $std-grid_render-span-settings: (
+            column-count       : $bp,
+            total-column-count : map-get($std-grid_settings, columns),
+            last               : $std-grid_single-column or ($std-grid_i == $std-grid_non-hidden-column-length),
+            gutter-override    : $std-grid_gutter-override
+          );
 
-            @include span($bp of map-get($std-grid_settings, columns) last);
-          }
-
-          @else {
-            display: block;
-
-            @include span($bp of map-get($std-grid_settings, columns));
-          }
-        }
-
-        @else {
-          @include breakpoint(map-get($breakpoint-settings, $label)) {
-            @if $std-grid_i == $std-grid_non-hidden-column-length {
-              display: block;
-
-              @include span($bp of map-get($std-grid_settings, columns) last);
-            }
-            
-            @else {
-              display: block;
-
-              @include span($bp of map-get($std-grid_settings, columns));
+          // Skips media queries if the current breakpoint is default (mobile first).
+          @if $label == "default" {
+            @include render-span($std-grid_render-span-settings);
+          } @else {
+            @include breakpoint(map-get($breakpoint-settings, $label)) {
+              @include render-span($std-grid_render-span-settings);
             }
           }
         }
       }
     }
 
-    // In case the current column is explicitly hidden, reduce index
-    // with 1, this will keep the last column count accurate.
-    // @if index($column-bps, (hide true)) == null
+    // Naively keeps track of visible columns.
     $std-grid_i: $std-grid_i + 1;
   }
 }
