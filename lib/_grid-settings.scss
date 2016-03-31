@@ -41,6 +41,18 @@ $myt-sb-main_settings: (
   )
 );
 
+// Simple grid (no space between columns)
+$myt-sb-main-simple_settings: (
+  columns: map-get($susy, columns),
+  simple-grid: true,
+
+  bps: (
+    col-1: (default: 6, small: 5, medium: 4, large: 3, x-large: 2 ),
+    col-2: (default: 6, small: 7, medium: 8, large: 9, x-large: 10),
+    col-3: (hide: true)
+  )
+);
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Sidebar - Main - Sidebar (myt-sb-main-sb)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

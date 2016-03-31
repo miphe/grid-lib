@@ -26,6 +26,7 @@
   // total-column-count : <num>                  # Susy global setting
   // last               : <bool>                 # false
   // gutter-override    : no-gutters / <length>  # Susy global setting
+  // simple-grid        : <bool>                 # false
 
   // Prepares column count.
   @if map-get($render-span-settings, column-count) {
@@ -38,15 +39,16 @@
     $render-span_total: map-get($render-span-settings, total-column-count);
     $render-span_new-settings: join($render-span_new-settings, $render-span_total);
   } @else {
-    $render-span_new-settings: join($render-span_new-settings, map-get($susy, columns));
+    $render-span_total: map-get($susy, columns);
+    $render-span_new-settings: join($render-span_new-settings, $render-span_total);
   }
 
   // Prepares 'last' keyword.
-  @if map-get($render-span-settings, last) {
+  @if map-get($render-span-settings, last) and not map-get($render-span-settings, gutter-override) and not map-get($render-span-settings, simple-grid) {
     $render-span_new-settings: join($render-span_new-settings, last);
   }
 
-  // Prepares gutters.
+  // Prepares gutters TODO: work a bit on this, or remove the feature.
   @if map-get($render-span-settings, gutter-override) {
     $render-span_gutter-override: map-get($render-span-settings, gutter-override);
     $render-span_new-settings: join($render-span_new-settings, $render-span_gutter-override);
@@ -55,7 +57,18 @@
   // @debug $render-span_new-settings;
 
   display: block;
-  @include span($render-span_new-settings);
+
+  // In case we want just a simple grid, we use our own math.
+  @if map-get($render-span-settings, simple-grid) {
+    float: left;
+    width: percentage(map-get($render-span-settings, column-count)/map-get($render-span-settings, total-column-count));
+    margin: {
+      left: 0;
+      right: 0;
+    };
+  } @else {
+    @include span($render-span_new-settings);
+  }
 }
 
 // Compound mixin handling rendering grids based on a settings map.
@@ -104,7 +117,8 @@
             column-count       : $bp,
             total-column-count : map-get($std-grid_settings, columns),
             last               : $std-grid_single-column or ($std-grid_i == $std-grid_non-hidden-column-length),
-            gutter-override    : $std-grid_gutter-override
+            gutter-override    : $std-grid_gutter-override,
+            simple-grid        : map-get($std-grid_settings, simple-grid)
           );
 
           // Skips media queries if the current breakpoint is default (mobile first).
