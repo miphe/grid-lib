@@ -483,6 +483,149 @@ head:hover ~ .myt-sb-main-sb:before, head:hover ~ body .myt-sb-main-sb:before {
 }
 
 /* line 21, ../../grids/_myt-grids.sass */
+.myt-sb-main-sb-simple {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 71, ../../../../.rvm/gems/ruby-2.1.1@mytal/gems/susy-2.2.12/sass/susy/language/susy/_background.scss */
+head:hover ~ .myt-sb-main-sb-simple, head:hover ~ body .myt-sb-main-sb-simple {
+  position: relative;
+}
+/* line 74, ../../../../.rvm/gems/ruby-2.1.1@mytal/gems/susy-2.2.12/sass/susy/language/susy/_background.scss */
+head:hover ~ .myt-sb-main-sb-simple:before, head:hover ~ body .myt-sb-main-sb-simple:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  z-index: 998;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2IzYjNmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.1)), color-stop(80%, rgba(179, 179, 255, 0.1)), color-stop(80%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 8.47458%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-sb-main-sb-simple > *:nth-child(1) {
+  display: block;
+  float: left;
+  width: 66.66667%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 40rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(1) {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(1) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 80rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(1) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-sb-main-sb-simple > *:nth-child(2) {
+  display: none;
+}
+@media (min-width: 40rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(2) {
+    display: block;
+    float: left;
+    width: 41.66667%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(2) {
+    display: block;
+    float: left;
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 80rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(2) {
+    display: block;
+    float: left;
+    width: 58.33333%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-sb-main-sb-simple > *:nth-child(3) {
+  display: block;
+  float: left;
+  width: 33.33333%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 40rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(3) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(3) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 80rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-sb-main-sb-simple > *:nth-child(3) {
+    display: block;
+    float: left;
+    width: 16.66667%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 26, ../../grids/_myt-grids.sass */
 .myt-main {
   overflow: hidden;
   *zoom: 1;
@@ -530,7 +673,7 @@ head:hover ~ .myt-main:before, head:hover ~ body .myt-main:before {
   display: none;
 }
 
-/* line 26, ../../grids/_myt-grids.sass */
+/* line 31, ../../grids/_myt-grids.sass */
 .myt-25-25-25-25 {
   overflow: hidden;
   *zoom: 1;
@@ -630,6 +773,111 @@ head:hover ~ .myt-25-25-25-25:before, head:hover ~ body .myt-25-25-25-25:before 
   }
 }
 
+/* line 36, ../../grids/_myt-grids.sass */
+.myt-25-25-25-25-simple {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 71, ../../../../.rvm/gems/ruby-2.1.1@mytal/gems/susy-2.2.12/sass/susy/language/susy/_background.scss */
+head:hover ~ .myt-25-25-25-25-simple, head:hover ~ body .myt-25-25-25-25-simple {
+  position: relative;
+}
+/* line 74, ../../../../.rvm/gems/ruby-2.1.1@mytal/gems/susy-2.2.12/sass/susy/language/susy/_background.scss */
+head:hover ~ .myt-25-25-25-25-simple:before, head:hover ~ body .myt-25-25-25-25-simple:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  z-index: 998;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2IzYjNmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.1)), color-stop(80%, rgba(179, 179, 255, 0.1)), color-stop(80%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.1), rgba(179, 179, 255, 0.1) 80%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 8.47458%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > *:nth-child(1) {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 30rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-25-25-25-25-simple > *:nth-child(1) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > *:nth-child(2) {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 30rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-25-25-25-25-simple > *:nth-child(2) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > *:nth-child(3) {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 30rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-25-25-25-25-simple > *:nth-child(3) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 110, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > *:nth-child(4) {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 30rem) {
+  /* line 110, ../../lib/_mixins.scss */
+  .myt-25-25-25-25-simple > *:nth-child(4) {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* line 4, ../../lib/_mixins.scss */
 .myt-sb-main > * {
   background: beige;
@@ -670,6 +918,19 @@ head:hover ~ .myt-25-25-25-25:before, head:hover ~ body .myt-25-25-25-25:before 
 }
 
 /* line 4, ../../lib/_mixins.scss */
+.myt-sb-main-sb-simple > * {
+  background: beige;
+  border: 1px dashed rgba(50, 50, 50, 0.25);
+  padding: 1.8rem;
+  color: rgba(50, 50, 50, 0.25);
+}
+/* line 10, ../../lib/_mixins.scss */
+.myt-sb-main-sb-simple > *:hover {
+  border-color: #323232;
+  color: #323232;
+}
+
+/* line 4, ../../lib/_mixins.scss */
 .myt-main > * {
   background: beige;
   border: 1px dashed rgba(50, 50, 50, 0.25);
@@ -695,7 +956,20 @@ head:hover ~ .myt-25-25-25-25:before, head:hover ~ body .myt-25-25-25-25:before 
   color: #323232;
 }
 
-/* line 49, ../sass/page-layouts.sass */
+/* line 4, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > * {
+  background: beige;
+  border: 1px dashed rgba(50, 50, 50, 0.25);
+  padding: 1.8rem;
+  color: rgba(50, 50, 50, 0.25);
+}
+/* line 10, ../../lib/_mixins.scss */
+.myt-25-25-25-25-simple > *:hover {
+  border-color: #323232;
+  color: #323232;
+}
+
+/* line 57, ../sass/page-layouts.sass */
 h1 {
   color: #ccc;
   font-size: 2rem;
@@ -703,7 +977,7 @@ h1 {
   margin: 1rem 0 1rem 0;
 }
 
-/* line 55, ../sass/page-layouts.sass */
+/* line 63, ../sass/page-layouts.sass */
 h2 {
   font-size: 1.6rem;
   line-height: 1.8;
@@ -711,7 +985,7 @@ h2 {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 61, ../sass/page-layouts.sass */
+/* line 69, ../sass/page-layouts.sass */
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   padding: 2rem 4rem;
