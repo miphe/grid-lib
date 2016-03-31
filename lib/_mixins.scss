@@ -1,0 +1,141 @@
+@mixin show-grid-columns {
+  > * {
+    background: beige;
+    border: 1px dashed rgba(50, 50, 50, 0.25);
+    padding: 1.8rem;
+    color: rgba(50, 50, 50, 0.25);
+
+    &:hover {
+      border-color: rgba(50, 50, 50, 1);
+      color: rgba(50, 50, 50, 1);
+    }
+  }
+}
+
+// Takes an object of span settings and omits the irrelevant properties
+// also adds relevant properties based on global susy settings.
+@mixin render-span($render-span-settings) {
+
+  $render-span_new-settings: ();
+
+  // $render-span-settings variable has to have the following structure:
+  // If omitted, they fall back to default (on the right)
+  // column-count       : <num>                  # Required
+  // total-column-count : <num>                  # Susy global setting
+  // last               : <bool>                 # false
+  // gutter-override    : no-gutters / <length>  # Susy global setting
+
+  // Prepares column count.
+  @if map-get($render-span-settings, column-count) {
+    $render-span_column-count: map-get($render-span-settings, column-count);
+    $render-span_new-settings: join($render-span_new-settings, $render-span_column-count of);
+  }
+
+  // Prepares total column count.
+  @if map-get($render-span-settings, total-column-count) {
+    $render-span_total: map-get($render-span-settings, total-column-count);
+    $render-span_new-settings: join($render-span_new-settings, $render-span_total);
+  } @else {
+    $render-span_new-settings: join($render-span_new-settings, map-get($susy, columns));
+  }
+
+  // Prepares 'last' keyword.
+  @if map-get($render-span-settings, last) {
+    $render-span_new-settings: join($render-span_new-settings, last);
+  }
+
+  // Prepares gutters.
+  @if map-get($render-span-settings, gutter-override) {
+    $render-span_gutter-override: map-get($render-span-settings, gutter-override);
+    $render-span_new-settings: join($render-span_new-settings, $render-span_gutter-override);
+  }
+
+  @debug $render-span_new-settings;
+  @include span($render-span_new-settings);
+}
+
+@mixin standard-grid($std-grid_settings, $no-gutters: false) {
+  $std-grid_columns:                  map-get($std-grid_settings, bps);
+  $std-grid_column-length:            length($std-grid_columns);
+  $std-grid_non-hidden-column-length: 0;
+  $std-grid_single-column:            false;
+  $std-grid_i:                        1;
+
+  // Creates a number of how many non hidden columns the settings contain.
+  @each $column-name, $column-bps in map-get($std-grid_settings, bps) {
+    @if index($column-bps, hide true) == null {
+      $std-grid_non-hidden-column-length: $std-grid_non-hidden-column-length + 1;
+    }
+  }
+
+  // Iterates over each column
+  @each $column-name, $column-bps in map-get($std-grid_settings, bps) {
+    @if $std-grid_non-hidden-column-length == 1 {
+      $std-grid_single-column: true;
+    }
+
+    // Creates selector for each immediate decendant
+    // of placeholder's element. The assumption here being
+    // that columns must be immediate decendants of the grid container.
+    > *:nth-child(#{$std-grid_i}) {
+
+      // Iterated over each breakpoint
+      @each $label, $bp in $column-bps {
+
+        // If this grid has only 1 column, skip all upcoming logic.
+        @if $std-grid_single-column {
+
+          // Checks if the current column should be hidden
+          @if $label == hide and $bp == true {
+            display: none;
+          }
+
+          @else {
+            @include span($bp of map-get($std-grid_settings, columns) last);
+          }
+        }
+
+        @else if $bp == 0 or $label == hide and $bp == true {
+          display: none;
+        }
+  
+        // Default breakpoint renders without media queries (mobile first)
+        @else if $label == "default" {
+
+          @if $std-grid_i == $std-grid_non-hidden-column-length {
+            display: block;
+
+            @include span($bp of map-get($std-grid_settings, columns) last);
+          }
+
+          @else {
+            display: block;
+
+            @include span($bp of map-get($std-grid_settings, columns));
+          }
+        }
+
+        @else {
+          @include breakpoint(map-get($breakpoint-settings, $label)) {
+            @if $std-grid_i == $std-grid_non-hidden-column-length {
+              display: block;
+
+              @include span($bp of map-get($std-grid_settings, columns) last);
+            }
+            
+            @else {
+              display: block;
+
+              @include span($bp of map-get($std-grid_settings, columns));
+            }
+          }
+        }
+      }
+    }
+
+    // In case the current column is explicitly hidden, reduce index
+    // with 1, this will keep the last column count accurate.
+    // @if index($column-bps, (hide true)) == null
+    $std-grid_i: $std-grid_i + 1;
+  }
+}
