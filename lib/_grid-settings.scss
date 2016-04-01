@@ -53,6 +53,16 @@ $myt-sb-main-simple_settings: (
   )
 );
 
+$myt-sb-main-sb-spacious-simple_settings: (
+  columns: map-get($susy, columns),
+  simple-grid: true,
+
+  bps: (
+    col-1: (default: 6, medium: 5, large: 4, x-large: 3 ),
+    col-2: (default: 6, medium: 7, large: 8, x-large: 9 ),
+    col-3: (hide: true)
+  ));
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Sidebar - Main - Sidebar (myt-sb-main-sb)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
